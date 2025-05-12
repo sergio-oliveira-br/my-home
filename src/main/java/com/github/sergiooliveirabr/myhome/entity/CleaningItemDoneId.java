@@ -12,14 +12,14 @@ import java.util.Objects;
 @Setter
 public class CleaningItemDoneId implements Serializable {
 
-    private Long cleaningItemId;
-    private Long cleaningId;
+    private Long cleaning;
+    private Long cleaningItem;
 
     public CleaningItemDoneId() {}
 
-    public CleaningItemDoneId(Long cleaningItemId, Long cleaningId) {
-        this.cleaningItemId = cleaningItemId;
-        this.cleaningId = cleaningId;
+    public CleaningItemDoneId(Long cleaningItem, Long cleaning) {
+        this.cleaningItem = cleaningItem;
+        this.cleaning = cleaning;
     }
 
     @Override
@@ -27,11 +27,11 @@ public class CleaningItemDoneId implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CleaningItemDoneId that = (CleaningItemDoneId) o;
-        return Objects.equals(cleaningId, that.cleaningId) && Objects.equals(cleaningItemId, that.cleaningItemId);
+        return Objects.equals(cleaning, that.cleaning) && Objects.equals(cleaningItem, that.cleaningItem);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cleaningItemId, cleaningId);
+        return Objects.hash(cleaningItem, cleaning);
     }
 }
