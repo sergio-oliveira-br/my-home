@@ -1,12 +1,10 @@
 package com.github.sergiooliveirabr.myhome.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 import java.util.Objects;
 
 @Entity
-@Data
 @IdClass(CleaningItemDoneId.class)
 public class CleaningItemDone {
 
@@ -19,6 +17,22 @@ public class CleaningItemDone {
     @ManyToOne
     @JoinColumn(name = "item_cleaning_id")
     private CleaningItem cleaningItem;
+
+    public Cleaning getCleaning() {
+        return cleaning;
+    }
+
+    public void setCleaning(Cleaning cleaning) {
+        this.cleaning = cleaning;
+    }
+
+    public CleaningItem getCleaningItem() {
+        return cleaningItem;
+    }
+
+    public void setCleaningItem(CleaningItem cleaningItem) {
+        this.cleaningItem = cleaningItem;
+    }
 
     @Override
     public boolean equals(Object o) {
