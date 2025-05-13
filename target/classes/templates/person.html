@@ -35,6 +35,23 @@
 </header>
 
 <main class="container d-flex justify-content-center flex-column align-items-center">
+    
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Room</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person : ${tenant}">
+            <td th:text="${person.id}">#</td>
+            <td th:text="${person.name}">Name</td>
+            <td th:text="${person.assignedRoom}">Room</td>
+        </tr>
+        </tbody>
+    </table>
 
     <div class="card">
         <p class="card-header">Tenant Registration</p>
