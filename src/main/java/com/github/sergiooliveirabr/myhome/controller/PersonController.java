@@ -26,7 +26,7 @@ public class PersonController {
     @GetMapping
     public String viewPersonPage(Model model) {
         model.addAttribute("person", new Person());
-        model.addAttribute("people", personService.findAll());
+        model.addAttribute("tenant", personService.findAll());
         return "person";
     }
 
