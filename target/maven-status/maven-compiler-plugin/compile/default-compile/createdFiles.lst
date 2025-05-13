@@ -1,0 +1,15 @@
+com/github/sergiooliveirabr/myhome/controller/IndexController.class
+com/github/sergiooliveirabr/myhome/MyHomeApplication.class
+com/github/sergiooliveirabr/myhome/repository/CleaningItemRepository.class
+com/github/sergiooliveirabr/myhome/service/PersonService.class
+com/github/sergiooliveirabr/myhome/repository/PersonRepository.class
+com/github/sergiooliveirabr/myhome/controller/PersonController.class
+com/github/sergiooliveirabr/myhome/entity/Person.class
+com/github/sergiooliveirabr/myhome/entity/CleaningItem.class
+com/github/sergiooliveirabr/myhome/entity/CleaningItemDoneId.class
+com/github/sergiooliveirabr/myhome/repository/CleaningRepository.class
+com/github/sergiooliveirabr/myhome/entity/CleaningItemDone.class
+com/github/sergiooliveirabr/myhome/controller/PastCleaningsController.class
+com/github/sergiooliveirabr/myhome/entity/Cleaning.class
+com/github/sergiooliveirabr/myhome/controller/ScheduleController.class
+com/github/sergiooliveirabr/myhome/controller/NewCleaningController.class
