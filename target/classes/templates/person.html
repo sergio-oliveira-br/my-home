@@ -36,7 +36,24 @@
 
 <main class="container d-flex justify-content-center flex-column align-items-center">
 
+    <div class="card">
+        <p class="card-header">Tenant Registration</p>
+        <div class="card-body">
+            <form th:action="@{/person/add}" th:object="${person}" method="post">
+                <div class="mb-3">
+                    <input type="text" class="form-control" aria-label="tenant's name" placeholder="Name" th:field="*{name}">
+                </div>
 
+                <select class="form-select form-select-sm" aria-label="Small select example" th:field="*{assignedRoom}">
+                    <option value="ROOM1">Room 1</option>
+                    <option value="ROOM2">Room 2</option>
+                    <option value="ROOM3">Room 3</option>
+                </select>
+
+                <button type="submit" class="btn btn-light mt-3">Submit</button>
+            </form>
+        </div>
+    </div>
 </main>
 
 <footer>
