@@ -18,7 +18,7 @@
         <header>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index">Home</a>
+                    <a class="navbar-brand" th:href="@{/index}">Home</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -26,10 +26,11 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="index">Home</a>
-                            <a class="nav-link" href="past-cleanings">Past Cleanings</a>
-                            <a class="nav-link" href="schedule">Schedule</a>
-                            <a class="nav-link" href="new-cleaning">New Cleaning</a>
+                            <a class="nav-link active" aria-current="page" th:href="@{/index}">Home</a>
+                            <a class="nav-link" th:href="@{/past-cleanings}">Past Cleanings</a>
+                            <a class="nav-link" th:href="@{/schedule}">Schedule</a>
+                            <a class="nav-link" th:href="@{/new-cleaning}">New Cleaning</a>
+                            <a class="nav-link" th:href="@{/person}">Person</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +74,7 @@
         <footer>
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item">
-                    <a href="https://www.linkedin.com/in/sergio-oliveira-063613163/"
+                    <a th:href="@{https://www.linkedin.com/in/sergio-oliveira-063613163/}"
                        class="nav-link px-2 text-body-secondary">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
@@ -88,7 +89,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="https://github.com/sergio-oliveira-br"
+                    <a th:href="@{https://github.com/sergio-oliveira-br}"
                        class="nav-link px-2 text-body-secondary">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
