@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -21,9 +23,16 @@ public class PersonController {
         this.personService = personService;
     }
 
+    @GetMapping
+    public String viewPersonPage(Model model) {
+        model.addAttribute("person", new Person());
+        model.addAttribute("people", personService.findAll());
+        return "person";
+    }
+
     @PostMapping("/add")
-    public ResponseEntity<Person> addPerson(@RequestBody Person person) {
+    public String addPerson(@ModelAttribute Person person) {
         personService.save(person);
-        return ResponseEntity.status(HttpStatus.CREATED).body(person);
+        return "redirect:/person";
     }
 }
