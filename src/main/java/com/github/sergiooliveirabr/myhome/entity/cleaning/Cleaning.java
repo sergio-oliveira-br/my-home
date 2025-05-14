@@ -2,13 +2,11 @@ package com.github.sergiooliveirabr.myhome.entity.cleaning;
 
 import com.github.sergiooliveirabr.myhome.entity.person.Person;
 import jakarta.persistence.*;
-import lombok.Data;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Data
 public class Cleaning {
 
     @Id
