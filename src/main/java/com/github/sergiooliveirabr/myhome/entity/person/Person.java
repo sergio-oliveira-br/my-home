@@ -1,7 +1,7 @@
-package com.github.sergiooliveirabr.myhome.entity;
+package com.github.sergiooliveirabr.myhome.entity.person;
 
+import com.github.sergiooliveirabr.myhome.entity.cleaning.Room;
 import jakarta.persistence.*;
-import lombok.Data;
 
 @Entity
 //@Data

@@ -1,4 +1,4 @@
-package com.github.sergiooliveirabr.myhome.entity;
+package com.github.sergiooliveirabr.myhome.entity.cleaning;
 
 import jakarta.persistence.*;
 
