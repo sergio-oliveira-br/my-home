@@ -1,10 +1,8 @@
-package com.github.sergiooliveirabr.myhome.service;
+package com.github.sergiooliveirabr.myhome.service.person;
 
 import com.github.sergiooliveirabr.myhome.entity.Person;
 import com.github.sergiooliveirabr.myhome.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
