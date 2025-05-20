@@ -45,7 +45,7 @@
                     <h5 class="card-title">Manage the Residents</h5>
                     <p class="card-text text-muted">You have the option to include or exclude new residents on this page.</p>
                 </div>
-                <a href="#" class="btn btn-outline-dark col-12">Go to Page</a>
+                <a th:href="@{/person}" class="btn btn-outline-dark col-12">Go to Page</a>
             </div>
         </div>
         <div class="col">
@@ -59,7 +59,7 @@
                     <h5 class="card-title">Start Your Schedule</h5>
                     <p class="card-text">Enter the date when the cleaning schedule will be created.</p>
                 </div>
-                <a href="#" class="btn btn-outline-dark col-12">Open the Form</a>
+                <a th:href="@{/start-schedule}" class="btn btn-outline-dark col-12">Open the Form</a>
             </div>
         </div>
         <div class="col">
@@ -73,7 +73,7 @@
                     <h5 class="card-title">Start Your Schedule</h5>
                     <p class="card-text">Enter the date when the cleaning schedule will be created.</p>
                 </div>
-                <a href="#" class="btn btn-outline-dark col-12">Open the Form</a>
+                <button href="#" class="btn btn-outline-dark col-12"  disabled data-bs-toggle="button">Open the Form</button>
             </div>
         </div>
     </div>
