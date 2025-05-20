@@ -25,7 +25,7 @@ public class PersonController {
     public String viewPersonPage(Model model) {
         model.addAttribute("person", new Person());
         model.addAttribute("tenant", personService.findAll());
-        return "person";
+        return "config/person";
     }
 
     @PostMapping("/add")
