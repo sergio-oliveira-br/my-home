@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/config")
+@RequestMapping("/menu-config")
 public class ConfigController {
 
     @GetMapping
     public String viewConfigPage(Model model) {
-        return "config/config";
+        return "config/menu-config";
     }
 }
