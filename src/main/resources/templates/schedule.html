@@ -45,35 +45,29 @@
             </svg>
         </div>
         <div class="card-body">
-            <h5 class="card-title">Week 33 | Delay</h5>
-            <div class="row">
-                <p class="card-text col-9">Room 1</p>
-                <p class="card-text col-3">Delay</p>
-            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Who</th>
+                </tr>
+                </thead>
 
-            <a href="#" class="btn btn-dark col-12">Register</a>
+                <tbody>
+                <tr th:each="item : ${schedules}">
+                    <td th:text="${item.room}"></td>
+                    <td>
+                        <form>
+                            <button type="submit" class="btn btn-outline-dark">Concluir limpeza</button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    <table class="table m-3" style="width: 80%">
-        <thead>
-        <tr>
-            <th scope="col">Week</th>
-            <th scope="col">Who</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">Week 34</th>
-            <td>Room 1</td>
-<!--            <td>Otto</td>-->
-        </tr>
-        <tr>
-            <th scope="row">Week 35</th>
-            <td>Room 2</td>
-<!--            <td>Thornton</td>-->
-        </tr>
-        </tbody>
-    </table>
+
+
 
 </main>
 
