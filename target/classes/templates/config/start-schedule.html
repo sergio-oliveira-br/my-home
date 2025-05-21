@@ -36,19 +36,37 @@
 
 <main class="container d-flex justify-content-center flex-column align-items-center">
 
-    <div class="card border-secondary mb-3" style="max-width: 18rem;">
+    <div class="card border-secondary m-3" style="max-width: 18rem;">
         <div class="card-header">First Week</div>
         <div class="card-body text-secondary">
             <p class="card-text">Give the date that the system will generate cleaning tasks for the next 6 weeks.</p>
-            <form>
-                <input class="form-control" type="date" aria-label="first-week">
-                <select class="form-control" aria-label="room">
-                    <option th:each="room : ${roomoptions}" th:text="${room}"></option>
+
+            <form th:action="@{/start-schedule/generate}" method="post">
+
+                <select name="room" class="form-control" aria-label="room">
+                    <option th:each="room : ${roomoptions}" th:value="${room}" th:text="${room}"></option>
                 </select>
+
                 <button type="submit" class="btn btn-dark mt-3 col-12">Submit</button>
             </form>
         </div>
     </div>
+
+    <table>
+        <tr>
+            <th>Quarto</th>
+            <th>Ação</th>
+        </tr>
+        <tr th:each="item : ${schedules}">
+            <td th:text="${item.room}"></td>
+            <td>
+                <form>
+                    <button type="submit">Concluir limpeza</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+
 
 
 </main>
