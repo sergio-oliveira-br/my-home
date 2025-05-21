@@ -17,6 +17,8 @@ public class CleaningSchedule {
     @Enumerated(EnumType.STRING)
     private Room room;
 
+    private boolean completed;
+
     public Long getId() {
         return id;
     }
@@ -39,5 +41,13 @@ public class CleaningSchedule {
 
     public void setRoom(Room room) {
         this.room = room;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 }
