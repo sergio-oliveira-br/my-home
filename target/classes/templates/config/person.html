@@ -39,18 +39,18 @@
 
     <table class="table">
         <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Room</th>
-        </tr>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Room</th>
+            </tr>
         </thead>
         <tbody>
-        <tr th:each="person : ${tenant}">
-            <td th:text="${person.id}">#</td>
-            <td th:text="${person.name}">Name</td>
-            <td th:text="${person.room.name}"></td>
-        </tr>
+            <tr th:each="person : ${tenant}">
+                <td th:text="${person.id}">#</td>
+                <td th:text="${person.name}">Name</td>
+                <td th:text="${person.room.name}"></td>
+            </tr>
         </tbody>
     </table>
 
