@@ -3,7 +3,6 @@ package com.github.sergiooliveirabr.myhome.entity;
 import jakarta.persistence.*;
 
 @Entity
-//@Data
 public class Person {
 
     @Id
@@ -11,6 +10,9 @@ public class Person {
     private Long id;
 
     private String name;
+
+    @ManyToOne
+    private Room room;
 
     public Long getId() {
         return id;
@@ -26,5 +28,13 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
     }
 }
