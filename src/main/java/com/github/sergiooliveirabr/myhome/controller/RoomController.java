@@ -19,7 +19,7 @@ public class RoomController {
     }
 
     @GetMapping
-    public String room(Model model) {
+    public String viewRoomPage(Model model) {
         model.addAttribute("room", new Room());
         model.addAttribute("allrooms", roomService.findAll());
         return "config/room";
