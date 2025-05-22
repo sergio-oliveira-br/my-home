@@ -69,16 +69,15 @@
         </div>
         <div class="col">
             <div class="card p-3">
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-calendar4-event" viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
-                    <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                    <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
+                    <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"/>
                 </svg>
                 <div class="card-body">
-                    <h5 class="card-title">Start Your Schedule</h5>
-                    <p class="card-text">Enter the date when the cleaning schedule will be created.</p>
+                    <h5 class="card-title">Manage Your Rooms</h5>
+                    <p class="card-text">It's up to you to decide whether to include or exclude new rooms on this page.</p>
                 </div>
-                <button href="#" class="btn btn-outline-dark col-12"  disabled data-bs-toggle="button">Open the Form</button>
+                <a th:href="@{/room}" class="btn btn-outline-dark col-12">Open the Form</a>
             </div>
         </div>
     </div>
