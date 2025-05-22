@@ -1,6 +1,6 @@
-package com.github.sergiooliveirabr.myhome.service.person;
+package com.github.sergiooliveirabr.myhome.service;
 
-import com.github.sergiooliveirabr.myhome.entity.person.Person;
+import com.github.sergiooliveirabr.myhome.entity.Person;
 import com.github.sergiooliveirabr.myhome.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package com.github.sergiooliveirabr.myhome.controller;
 
-import com.github.sergiooliveirabr.myhome.entity.person.Person;
-import com.github.sergiooliveirabr.myhome.service.person.PersonService;
+import com.github.sergiooliveirabr.myhome.entity.Person;
+import com.github.sergiooliveirabr.myhome.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

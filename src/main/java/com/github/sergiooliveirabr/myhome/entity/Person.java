@@ -1,6 +1,5 @@
-package com.github.sergiooliveirabr.myhome.entity.person;
+package com.github.sergiooliveirabr.myhome.entity;
 
-import com.github.sergiooliveirabr.myhome.entity.cleaning.Room;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,9 +11,6 @@ public class Person {
     private Long id;
 
     private String name;
-
-    @Enumerated(EnumType.STRING)
-    private Room assignedRoom;
 
     public Long getId() {
         return id;
@@ -30,13 +26,5 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Room getAssignedRoom() {
-        return assignedRoom;
-    }
-
-    public void setAssignedRoom(Room assignedRoom) {
-        this.assignedRoom = assignedRoom;
     }
 }
