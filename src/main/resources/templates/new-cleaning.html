@@ -61,124 +61,22 @@
         </div>
 
         <div class="card-body">
-            <form>
-                <label for="tenant" class="form-label">Tenant</label>
-                <select id="tenant" class="form-select mb-3">
-<!--                    <option >Open this select menu</option>-->
-                    <option value="">Diogo</option>
-                    <option value="">Felipe</option>
-                    <option value="">Paula</option>
-                    <option value="">Selma</option>
-                    <option value="">Sergio</option>
-                    <option value="">Vini</option>
+            <form th:object="${cleaning}" th:action="@{/new-cleaning/add}" method="post">
+                <label th:for="responsiblePerson" class="form-label">Tenant</label>
+                <select class="form-select mb-3" th:field="*{responsiblePerson}" required>
+                    <option value="">Select Tenant</option>
+                    <option
+                        th:each="person : ${tenant}"
+                        th:value="${person.id}"
+                        th:text="${person.name}">
+                    </option>
                 </select>
 
                 <div class="my-3">
-                    <label for="date" class="form-label">Date</label>
-                    <input id="date" class="form-control" type="date">
+                    <label th:for="dataHeld" class="form-label">Date</label>
+                    <input class="form-control" type="date" th:field="*{dataHeld}">
                 </div>
-
-                <label class="form-label mt-3">Living Room</label>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Window</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Couch</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Floor</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Coffe Table</label>
-                    </li>
-                </ul>
-
-                <label class="form-label mt-3">Kitchen</label>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Window</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Table</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" >
-                        <label class="form-check-label" for="">Oven</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" >
-                        <label class="form-check-label" for="">Stove</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" >
-                        <label class="form-check-label" for="">Balcony</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" >
-                        <label class="form-check-label" for="">Frige</label>
-                    </li>
-                </ul>
-
-                <label class="form-label mt-3">Toilet</label>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Door</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Sink</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Vase</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Floor</label>
-                    </li>
-                </ul>
-
-                <label class="form-label mt-3">Stairs</label>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Carpet</label>
-                    </li>
-                </ul>
-
-                <label class="form-label mt-3">Room</label>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Window</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Floor</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Wardrobe</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Door</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="">
-                        <label class="form-check-label" for="">Chests of Drawers</label>
-                    </li>
-                </ul>
-
-
+                <button type="submit" class="btn btn-dark col-12">Submit</button>
             </form>
         </div>
     </div>
