@@ -61,18 +61,22 @@
         </div>
 
         <div class="card-body">
-            <form>
-                <label for="tenant" class="form-label">Tenant</label>
-                <select id="tenant" class="form-select mb-3" th:field="*{responsiblePerson}">
-                    <option>
-
+            <form th:object="${cleaning}" th:action="@{/new-cleaning/add}" method="post">
+                <label th:for="responsiblePerson" class="form-label">Tenant</label>
+                <select class="form-select mb-3" th:field="*{responsiblePerson}" required>
+                    <option value="">Select Tenant</option>
+                    <option
+                        th:each="person : ${tenant}"
+                        th:value="${person.id}"
+                        th:text="${person.name}">
                     </option>
                 </select>
 
                 <div class="my-3">
-                    <label for="date" class="form-label">Date</label>
-                    <input id="date" class="form-control" type="date">
+                    <label th:for="dataHeld" class="form-label">Date</label>
+                    <input class="form-control" type="date" th:field="*{dataHeld}">
                 </div>
+                <button type="submit" class="btn btn-dark col-12">Submit</button>
             </form>
         </div>
     </div>
