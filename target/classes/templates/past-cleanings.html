@@ -54,7 +54,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="last_cleaning : ${clean_history}">
+                    <tr th:each="last_cleaning : ${history}">
                         <td th:text="${last_cleaning.getResponsiblePerson().getRoom().name}"></td>
                         <td th:text="${last_cleaning.getResponsiblePerson().name}"></td>
                         <td th:text="${last_cleaning.getDataHeld()}"></td>
