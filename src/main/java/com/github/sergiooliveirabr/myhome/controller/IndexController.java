@@ -24,8 +24,11 @@ public class IndexController {
         String date = String.valueOf(pastCleaningService.findLastCleaning().get().getDataHeld());
         String person = pastCleaningService.findLastCleaning().get().getResponsiblePerson().getName();
 
+        model.addAttribute("display_days_ago", pastCleaningService.getFormattedLastCleaningDetails());
+
         model.addAttribute("last_cleaning",
                 person + " carried out the most recent cleaning on " + date);
+
         return "index";
     }
 }
