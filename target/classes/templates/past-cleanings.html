@@ -40,7 +40,29 @@
     </nav>
 </header>
 
-<main>
+<main class="container d-flex justify-content-center flex-column align-items-center">
+
+    <div class="card m-3">
+        <h5 class="card-header">History</h5>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Room</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="last_cleaning : ${clean_history}">
+                        <td th:text="${last_cleaning.getResponsiblePerson().getRoom().name}"></td>
+                        <td th:text="${last_cleaning.getResponsiblePerson().name}"></td>
+                        <td th:text="${last_cleaning.getDataHeld()}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 </main>
 
